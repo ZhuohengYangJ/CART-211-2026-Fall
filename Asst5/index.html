@@ -28,11 +28,11 @@
                         </a>
                     </div>
 
-                <div class="menu1"></div>
+                <div class="menu1">
                 <a href="sorie1.html" class="menu1_active">STORIES</a>
                 <a href="#" class="menu1_active">SERIES</a>
                 <a href="index.html" class="menu1_active">ABOUT</a>
-
+                </div>
 
                 </nav>
             </header>
@@ -148,6 +148,34 @@
                 </div>
             </footer>
         </div>
+        /*Makes the moblie hamburger menu openand close.
+        JS adds or removes a CSS class.*/
+
+        <script>
+            /*wait until the html document has finished loading.HTMLThis ensures the buttons
+            exist before JS tries to select items.*/
+
+            document.addEventListener('DOMcontentloaded' ,
+            () => {
+                const hamburgerButton = document.
+                querySelector('.hamburger-new button');
+
+                const closedButton = document.querySelector('.close-menu');
+
+                const menu1 = document.querySelector('.menu1');
+
+                hamburgerButton.addEventListener('click', () => {
+                    menu1.classList.add('menu-deployed');
+                });
+
+                /*Wen the  button is clicked, remove the "menu-deployed" so th new menu close*/
+                closedButton.addEventListener('click', () => {
+                    menu1.classList.remove('menu-deploye');
+                });
+
+            });
+        </script>
         
 
     </body>
+</html>
